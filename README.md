@@ -1,38 +1,47 @@
- NovelApp
-Aplikasi baca novel yang dibangun dengan Flutter (Mobile) dan Laravel (Backend API). Aplikasi ini memungkinkan pengguna untuk membaca novel favorit, menyimpan progres bacaan melalui fitur bookmark, dan mengelola daftar novel favorit. Untuk sisi admin, aplikasi ini menyediakan alat manajemen konten yang lengkap untuk moderasi dan publikasi novel.
+📖 NovelHub: Modern Digital Reading Platform
+NovelHub adalah aplikasi platform baca novel digital yang dirancang untuk memberikan pengalaman membaca yang mulus bagi pengguna, serta menyediakan alat manajemen konten yang komprehensif bagi penulis dan moderator (admin). Proyek ini dikembangkan dengan pendekatan full-stack menggunakan Flutter untuk sisi mobile dan Laravel untuk backend RESTful API.
 
-🚀 Fitur Utama
-👤 Pengguna (User)
-Autentikasi: Registrasi dan Login akun pengguna.
+🚀 Mengapa Proyek Ini?
+Aplikasi ini dibangun untuk menyelesaikan masalah fragmentasi konten dalam platform bacaan, dengan menerapkan sistem Role-Based Access Control (RBAC) yang ketat untuk menjaga kualitas dan integritas konten di platform.
 
-Daftar Novel: Menjelajahi berbagai novel yang tersedia.
+🛠️ Tech Stack & Arsitektur
+Proyek ini mengadopsi standar pengembangan perangkat lunak modern:
 
-Favorit: Menyimpan novel ke dalam daftar favorit untuk akses cepat.
+Frontend (Mobile): Flutter (Dart)
 
-Bookmark: Melacak progres bacaan per bab (chapter) sehingga pengguna bisa melanjutkan dari tempat terakhir mereka membaca.
+Backend (API): Laravel 12 (PHP)
 
-🛡️ Admin
-CRUD Novel: Membuat, membaca, memperbarui, dan menghapus data novel.
+Database: MySQL
 
-CRUD Chapter: Mengelola isi bab dari setiap novel.
+Authentication: Laravel Sanctum (Token-based API Authentication)
 
-Manajemen Status: Mengatur status novel antara Draft (hanya admin yang lihat) atau Published (publik).
+Architecture: RESTful API, MVC Pattern, 
 
-Moderasi Konten: Menghapus novel yang tidak sesuai dengan ketentuan atau tidak wajar.
+🎯 Fitur Utama
+Sistem ini dirancang dengan segmentasi akses pengguna untuk memastikan alur kerja yang efisien:
 
-🛠️ Teknologi yang Digunakan
-Frontend (Mobile):
+👤 Pengguna (Reader)
+Content Discovery: Menjelajahi daftar novel yang tersedia.
 
-Flutter - Framework UI.
+Personalization: Menambahkan novel ke daftar Favorit pribadi.
 
-Dio - HTTP Client untuk komunikasi API.
+Reading Progress: Fitur Bookmark per chapter untuk melanjutkan bacaan dari titik terakhir.
 
-[Provider/GetX/Bloc] - (Pilih salah satu, sesuaikan dengan state management Anda) untuk manajemen state.
+✍️ Author
+Full Lifecycle Content Management: Membuat, membaca, memperbarui, dan menghapus novel serta chapter secara mandiri.
 
-Backend (API):
 
-Laravel - PHP Framework.
 
-MySQL - Database.
+🛡️ Administrator
+Content Moderation: Mengubah status novel (Draft vs Published). Draft & Publish Control: Mengelola draf novel sebelum dipublikasikan ke publik.
 
-[Laravel Sanctum/Passport] - Untuk autentikasi API.
+Quality Assurance: Menghapus novel yang dianggap tidak layak (tidak wajar) untuk menjaga integritas komunitas.
+
+⚙️ Highlight Teknis untuk Recruiter
+Secure API: Implementasi autentikasi API yang aman menggunakan Laravel Sanctum untuk melindungi endpoint sensitif.
+
+RBAC Implementation: Middleware kustom untuk memisahkan logika akses antara User, Author, dan Admin.
+
+Clean Database Design: Struktur database yang dinormalisasi untuk mendukung relasi kompleks antara User, Novel, Chapter, dan Favorit.
+
+Scalable Architecture: Kode backend yang terstruktur dengan Controller-Service-Model untuk memudahkan maintenance.
